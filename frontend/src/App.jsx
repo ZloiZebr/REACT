@@ -1,14 +1,16 @@
 import { useState } from "react"
-import UserCard from "./components/UI/UserCard/UserCard"
-import Product from "./components/UI/Product/Product"
+import ToggleBlock from "./components/UI/ToggleBlock"
 
 function App() {
-  return( 
-    <div>
-      <h1>Домашнее задание по React №2</h1>
-      <UserCard  name="Иван" age={25} city="Москва"/>
-      <Product title="iPhone" price={50000} category="Электроника" inStock={false} />
-    </div>
+  const [showHideBlock,setShowHideBlock] = useState(false) 
+  return(
+      <>
+        <h1>Домашнее задание по React №3</h1>
+        <button onClick = {() => setShowHideBlock(!showHideBlock)}>
+          {!showHideBlock ? "Показать":"Скрыть"} блок с текстом 
+        </button>
+        {showHideBlock && <ToggleBlock/>}
+      </>
   )
 }
 
