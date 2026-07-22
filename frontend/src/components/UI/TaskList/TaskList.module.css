@@ -1,0 +1,8 @@
+.taskCard{
+    border: 1px solid red;
+    margin:10px;
+    border-radius: 5px;
+    color:brown;
+    padding:10px;
+    background-color: pink;
+}
