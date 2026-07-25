@@ -1,0 +1,1 @@
+export { default } from './AddProduct1.jsx'
