@@ -1,0 +1,26 @@
+.contactCard{
+    border: 2px solid rgb(21, 0, 255);
+    margin:10px;
+    border-radius: 5px;
+    color:rgb(0, 0, 0);
+    padding:10px;
+    background-color: rgb(207, 222, 249);
+    height: 200px;
+    width: fit-content;
+    min-width: 300px;
+    max-width: 500px;
+    position: relative
+}
+.deleteIcon {  
+    float:right;  
+    cursor: pointer;
+    margin: 10px;
+}
+.editIcon {
+  float:right;  
+    cursor: pointer;
+    margin: 10px;
+}
+.deleteIcon:hover,.editIcon:hover {
+    opacity: 0.5
+}
