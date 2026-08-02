@@ -1,0 +1,48 @@
+.notFoundPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9fbfd;
+    color: #1a3a5c; /* твой фирменный цвет */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.notFoundPage h1 {
+    font-size: 3rem;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.notFoundPage p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+
+.backLink {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1a3a5c;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(26, 58, 92, 0.2);
+}
+
+.backLink:hover {
+    background-color: #0f263e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(26, 58, 92, 0.3);
+}
+
+.backLink:active {
+    transform: translateY(0);
+}

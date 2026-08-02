@@ -5,13 +5,15 @@ const EditContact= ({ contact, onEdit }) => {
     const [name, setName] = useState(contact.name)
     const [phoneNumber, setPhoneNumber] = useState(contact.phoneNumber)
     const [eMail, setEMail] = useState(contact.eMail)
+    const [description, setDescription] = useState(contact.description)
 
     const handleSubmit = () => {
         onEdit({
             id: contact.id,
             name,
             phoneNumber,
-            eMail
+            eMail,
+            description
         })
     }
 
@@ -42,7 +44,13 @@ const EditContact= ({ contact, onEdit }) => {
                     placeholder='Введите номер электронной почты'
                     onChange={e => setEMail(e.target.value)}
                 />
-        
+                <input 
+                    type="text"
+                    name = "description"
+                    placeholder='Введите описание контакта'
+                    value = {description}
+                    onChange={e => setDescription(e.target.value)}
+                />
                 <button 
                     type="button"
                     onClick={handleSubmit}
@@ -51,7 +59,7 @@ const EditContact= ({ contact, onEdit }) => {
                 </button>
             </form>
         </div>
-  )
+    )
 }
 
 export default EditContact

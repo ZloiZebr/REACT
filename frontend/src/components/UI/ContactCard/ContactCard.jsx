@@ -2,7 +2,10 @@ import styles from './ContactCard.module.css'
 import { GrEdit } from "react-icons/gr"
 import { GrTrash } from "react-icons/gr"
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 import EditContact from '@components/UI/EditContact'
+
 
 
 const ContactCard = ({contact,onDelete,onEdit}) => {
@@ -27,7 +30,9 @@ const ContactCard = ({contact,onDelete,onEdit}) => {
                 size={30}
                 color="green"
             />
-            <h4>Имя контакта - {contact.name}</h4>
+            <Link to={`contacts/${contact.id}`}>
+                <strong>{contact.name}</strong>
+            </Link>
             <p>Номер телефона: {contact.phoneNumber}</p>
             <p>Адрес электронной почты: {contact.eMail}</p>
             

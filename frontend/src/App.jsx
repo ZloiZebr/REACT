@@ -1,8 +1,16 @@
 import ContactList from '@components/UI/ContactList'
 import AddContact from '@components/UI/AddContact'
+import HomePage from '@components/UI/HomePage'
+import AboutPage from '@components/UI/AboutPage'
+import ContactsPage from '@components/UI/ContactsPage'
+import NotFoundPage from '@components/UI/NotFoundPage'
+import ContactsDetailsPage from '@components/UI/ContactsDetailsPage'
 import { useState, useEffect } from 'react'
 import styles from './App.module.css'
 import axios from 'axios'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 
   
 const API_URL = import.meta.env.VITE_API_URL
@@ -47,22 +55,37 @@ function App() {
       }, [])
 
   return(
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <ContactList
-          contacts={contacts}
-          contactsLoading={contactsLoading}
-          contactsError={contactsError}
-          onDelete = {deleteContact}
-          onEdit = {editContact}
-        />
-      </main>
-      <aside className={styles.aside}>
-        <AddContact
-          onAdd={addContact}
-        />
-      </aside>
-    </div>
+    <>
+    <Router>
+          <Routes>
+            <Route path="/" element={
+              <div className={styles.container}>
+                <main className={styles.main}>
+                  <h1>Домашнее задание по React №8 Часть 2</h1>
+                  <Link to="/home">На домашнюю страницу</Link>
+                  <ContactList
+                    contacts={contacts}
+                    contactsLoading={contactsLoading}
+                    contactsError={contactsError}
+                    onDelete = {deleteContact}
+                    onEdit = {editContact}
+                  />
+                </main>
+                <aside className={styles.aside}>
+                  <AddContact
+                  onAdd={addContact}
+                  />
+                </aside>
+              </div>
+            }/>
+            <Route path="/home" element={<HomePage/>}/>
+            <Route path="/about" element={<AboutPage/>}/>
+            <Route path="/contacts" element={<ContactsPage/>}/>
+            <Route path="/contacts/:id" element={<ContactsDetailsPage/>}/>
+            <Route path="*" element={<NotFoundPage/>}/>
+          </Routes>
+        </Router>
+    </>
   )
 }
 

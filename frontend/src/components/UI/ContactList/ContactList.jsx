@@ -4,7 +4,6 @@ import ContactCard from '@components/UI/ContactCard'
 const ContactList = ({contacts,contactsLoading,contactsError,onDelete,onEdit}) => {
     return(
         <>
-            <h1>Домашнее задание по React №6</h1>
             <h2>Список контактов</h2>
             <ul>{
                 contactsLoading ? (

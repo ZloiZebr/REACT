@@ -26,6 +26,11 @@ const AddContact = ({onAdd}) => {
                 name = "eMail"
                 placeholder='Введите номер электронной почты'
             />
+            <input 
+                type="text"
+                name = "description"
+                placeholder='Введите описание контакта'
+            />
 
             <button type="button"
                 onClick={()=> { 

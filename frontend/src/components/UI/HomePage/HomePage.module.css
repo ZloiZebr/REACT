@@ -1,0 +1,58 @@
+.homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* мягкий градиент фона */
+    color: #1a3a5c; /* твой цвет из прошлых задач */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.homePage h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.homePage p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 500px;
+    margin-bottom: 2.5rem;
+}
+
+.linksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.linksContainer a {
+    display: block;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    color: #1a3a5c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    text-align: left;
+}
+
+.linksContainer a:hover {
+    background-color: #f9f9f9;
+    border-color: #9fa8da;
+    transform: translateX(8px); /* лёгкая анимация сдвига */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.linksContainer a:active {
+    transform: translateX(4px);
+    background-color: #f0f0f0;
+}
