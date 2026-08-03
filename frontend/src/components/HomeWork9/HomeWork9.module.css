@@ -1,0 +1,284 @@
+.counterContainer {
+    max-width: 420px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: #ffcfcf;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    color: #333;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.counterContainer h2 {
+    margin: 0 0 1.25rem 0;
+    color: #1a3a5c;
+    font-size: 1.6rem;
+}
+
+.countValue {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #1a3a5c;
+    line-height: 1;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.btnCounter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 58, 92, 0.15);
+}
+
+.btnCounter:active {
+    transform: translateY(0);
+}
+
+.btnIncrease {
+    background-color: #e8f4e8;
+    color: #2e7d32;
+}
+
+.btnDecrease {
+    background-color: #f4e8e8;
+    color: #c62828;
+}
+
+.btnReset {
+    background-color: #f5f7fa;
+    color: #555;
+}
+
+.btnReset:hover {
+    background-color: #eef2f7;
+    color: #1a3a5c;
+}
+
+
+.linksContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.linksContainer a {
+    display: block;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    color: #1a3a5c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    text-align: left;
+}
+
+.linksContainer a:hover {
+    background-color: #f9f9f9;
+    border-color: #9fa8da;
+    transform: translateX(8px); /* лёгкая анимация сдвига */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.linksContainer a:active {
+    transform: translateX(4px);
+    background-color: #f0f0f0;
+}
+
+.tasksContainer {
+    max-width: 720px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: #9fe7ff; 
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(26, 58, 92, 0.06);
+    color: #2c2c2c;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.tasksContainer h2 {
+    color: #1a3a5c;
+    font-size: 1.8rem;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+}
+
+
+.allTasksValue,
+.notComplitedTasksValue {
+    display: block;
+    margin-bottom: 1rem;
+    color: #555;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.notComplitedTasksValue {
+  color: #d35400;
+}
+
+.tasksList {
+    margin-bottom: 2rem;
+}
+
+.task {
+    background: #ffffff;
+    border: 1px solid #e6eaf0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.task h3 {
+    margin: 0 0 0.5rem 0;
+    color: #1a3a5c;
+    font-size: 1.1rem;
+}
+
+.task span {
+    display: block;
+    color: #444;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.taskButtons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btnDelete {
+    padding: 8px 16px;
+    background-color: #ffe6e6;
+    color: #c62828;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btnDelete:hover {
+    background-color: #ffcdd2;
+    transform: translateY(-1px);
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    color: #333;
+}
+
+.checkboxInput {
+    width: 18px;
+    height: 18px;
+    accent-color: #1a3a5c; 
+    cursor: pointer;
+}
+
+.checkboxText {
+    font-size: 0.9rem;
+    color: #444;
+    }
+
+.taskInputForm {
+    display: flex;
+    gap: 12px;
+    }
+
+.taskInputForm input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #dbe2eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #222;
+}
+
+.taskInputForm input:focus {
+    outline: none;
+    border-color: #1a3a5c;
+    box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.12);
+}
+
+.taskInputForm button {
+    padding: 10px 20px;
+    background-color: #1a3a5c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.taskInputForm button:hover {
+    background-color: #0f263e;
+}
+.tasksButtonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    }
+
+.btnClearComplitedTasks {
+    padding: 10px 16px;
+    background-color: transparent;
+    color: #1a3a5c;
+    border: 1px solid #1a3a5c;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btnClearComplitedTasks:hover {
+    background-color: #eef2f7;
+    color: #0f263e;
+}
+
+.linksContainer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.linksContainer a {
+    color: #1a3a5c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.linksContainer a:hover {
+    color: #0f263e;
+    text-decoration: underline;
+}
