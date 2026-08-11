@@ -1,0 +1,282 @@
+.cartContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.cartContainer h2 {
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.countTotal {
+    display: block;
+    text-align: center;
+    background-color: #eef2f7;
+    border: 1px solid #cfe2ff;
+    color: #0d6efd;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px; /* Закругленная таблетка */
+    width: fit-content;
+    margin: 1.5rem auto 2.5rem auto;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+.addItemContainer {
+    background: #fff;
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2.5rem;
+}
+
+.itemInputForm {
+    display: flex;
+    gap: 10px;
+}
+
+.itemInputForm input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-size: 1rem;
+}
+
+.itemInputForm input:focus {
+    border-color: #1a3a5c;
+    box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.15);
+}
+
+.itemInputForm button {
+    padding: 0.8rem 1.8rem;
+    background-color: #1a3a5c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.itemInputForm button:hover:not(:disabled) {
+    background-color: #142b45;
+    transform: translateY(-1px);
+}
+
+.itemInputForm button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: #ccc;
+}
+
+.statusContainer {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.notification {
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: slideDown 0.3s ease-out;
+    border-left: 5px solid; 
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-color: #198754;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #84151a;
+    border-color: #dc3545;
+}
+
+.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-color: #ffc107;
+}
+
+
+.bi {
+    font-size: 1.2rem;
+}
+.bi.bi-check-circle-fill { color: #198754; }
+.bi.bi-x-circle-fill { color: #dc3545; }
+
+.loadButton {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border: 2px solid #1a3a5c;
+    color: #1a3a5c;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.loadButton:hover:not(:disabled) {
+    background-color: #1a3a5c;
+    color: white;
+}
+
+.loadButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    border-color: #ccc;
+    color: #ccc;
+}
+
+.loadingState {
+    text-align: center;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    color: #495057;
+}
+
+.loadingState .spinner-border {
+    margin-bottom: 1rem;
+}
+
+
+.emptyMessage {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f1f3f5;
+    border-radius: 12px;
+    color: #6c757d;
+    font-style: italic;
+    border: 1px dashed #ced4da;
+}
+
+.itemList {
+    margin-top: 1.5rem;
+}
+
+.itemCard {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.itemCard:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.cardInfo h3 {
+    margin: 0;
+    color: #1a3a5c;
+    font-size: 1.1rem;
+}
+
+.cardInfo span {
+    color: #555;
+    font-weight: 500;
+}
+
+.itemButtons button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.itemButtons button:hover:not(:disabled) {
+    background-color: #a71d2a;
+}
+
+.itemButtons button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+.linksContainer {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.linksContainer a {
+    color: #1a3a5c;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+.addingMessage,
+.deletingMessage {
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.addingMessage {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #c2e0c6;
+    border-left: 4px solid #198754;
+}
+
+
+.deletingMessage {
+    background-color: #f8d7da;
+    color: #84151a;
+    border: 1px solid #f5c6cb;
+    border-left: 4px solid #dc3545;
+}
+
+button span.spinner-border {
+    vertical-align: middle;
+}
+
+
+.statusMessage .spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+

@@ -57,7 +57,7 @@ const HomeWork10 = () => {
                     ) : (
                         items.map(item => (
                             <div key={item.id} className={styles.itemCard}>
-                                <h3>Товар: {item.name}</h3>
+                                <h3>Товар: {item.name.toUpperCase()}</h3>
                                 <span>Количество: {item.quantity}</span>
                                 <div className={styles.itemButtons}>
                                     <button onClick={() => removeItem(item)} className={styles.btnRemove}>

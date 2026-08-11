@@ -7,6 +7,7 @@ import NotFoundPage from '@components/UI/NotFoundPage'
 import ContactsDetailsPage from '@components/UI/ContactsDetailsPage'
 import HomeWork9 from '@components/HomeWork9'
 import HomeWork10 from '@components/HomeWork10'
+import HomeWork11 from '@components/HomeWork11'
 import { useState, useEffect } from 'react'
 import styles from './App.module.css'
 import axios from 'axios'
@@ -68,6 +69,7 @@ function App() {
                     <Link to="/home">На домашнюю страницу</Link>
                     <Link to="/HomeWork9">К Домашней работе №9</Link>
                     <Link to="/HomeWork10">К Домашней работе №10</Link>
+                    <Link to="/HomeWork11">К Домашней работе №11</Link>
                   </div>
                   <ContactList
                     contacts={contacts}
@@ -91,6 +93,7 @@ function App() {
             <Route path="*" element={<NotFoundPage/>}/>
             <Route path="/HomeWork9" element={<HomeWork9/>} />
             <Route path="/HomeWork10" element={<HomeWork10/>} />
+            <Route path="/HomeWork11" element={<HomeWork11/>} />
           </Routes>
         </Router>
     </>

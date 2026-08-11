@@ -11,7 +11,7 @@ const cartSlice = createSlice({
     reducers: {
         addItem: (state, action) => {
             const newItem = action.payload
-            const checkItem = state.items.find(item => item.name === newItem.name)
+            const checkItem = state.items.find(item => item.name.lower === newItem.name.lower)
             if (checkItem) {
                 checkItem.quantity += 1
             } else {
