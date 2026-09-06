@@ -8,6 +8,7 @@ import ContactsDetailsPage from '@components/UI/ContactsDetailsPage'
 import HomeWork9 from '@components/HomeWork9'
 import HomeWork10 from '@components/HomeWork10'
 import HomeWork11 from '@components/HomeWork11'
+import HomeWork12 from '@components/HomeWork12'
 import { useState, useEffect } from 'react'
 import styles from './App.module.css'
 import axios from 'axios'
@@ -70,6 +71,7 @@ function App() {
                     <Link to="/HomeWork9">К Домашней работе №9</Link>
                     <Link to="/HomeWork10">К Домашней работе №10</Link>
                     <Link to="/HomeWork11">К Домашней работе №11</Link>
+                    <Link to="/HomeWork12">К Домашней работе №12</Link>
                   </div>
                   <ContactList
                     contacts={contacts}
@@ -94,6 +96,7 @@ function App() {
             <Route path="/HomeWork9" element={<HomeWork9/>} />
             <Route path="/HomeWork10" element={<HomeWork10/>} />
             <Route path="/HomeWork11" element={<HomeWork11/>} />
+            <Route path="/HomeWork12" element={<HomeWork12/>} />
           </Routes>
         </Router>
     </>
