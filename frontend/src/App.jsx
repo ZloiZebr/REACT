@@ -10,11 +10,16 @@ import HomeWork10 from '@components/HomeWork10'
 import HomeWork11 from '@components/HomeWork11'
 import HomeWork12 from '@components/HomeWork12'
 import HomeWork14 from '@components/HomeWork14'
+import HomeWork34 from '@components/HomeWork34'
 import { useState, useEffect } from 'react'
 import styles from './App.module.css'
 import axios from 'axios'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import Layout from '@components/HomeWork34/Layout.jsx'
+import ProfilePage from '@components/HomeWork34/ProfilePage.jsx'
+import SettingsPage from '@components/HomeWork34/SettingsPage.jsx'
+import ProtectedRoute from '@components/HomeWork34/ProtectedRoute.jsx'
 
 
   
@@ -74,6 +79,7 @@ function App() {
                     <Link to="/HomeWork11">К Домашней работе №11</Link>
                     <Link to="/HomeWork12">К Домашней работе №12</Link>
                     <Link to="/HomeWork14">К Домашней работе №14</Link>
+                    <Link to="/HomeWork34">К Домашней работе №34</Link>
                   </div>
                   <ContactList
                     contacts={contacts}
@@ -100,6 +106,20 @@ function App() {
             <Route path="/HomeWork11" element={<HomeWork11/>} />
             <Route path="/HomeWork12" element={<HomeWork12/>} />
             <Route path="/HomeWork14" element={<HomeWork14/>} />
+            <Route path="/HomeWork34" element={<HomeWork34/>} />
+            <Route path="/HomeWork34" element={<Layout/>}>
+                <Route index element={<HomeWork34/>}/>
+                <Route path="profile" element={
+                  <ProtectedRoute>
+                    <ProfilePage/>
+                  </ProtectedRoute>
+                }/>
+                <Route path="settings" element={
+                  <ProtectedRoute>
+                    <SettingsPage/>
+                  </ProtectedRoute>
+                  }/>
+            </Route>
           </Routes>
         </Router>
     </>

@@ -1,0 +1,46 @@
+.settingsContainer {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    font-family: Arial, sans-serif;
+}
+
+.settingGroup {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.settingGroup h3 {
+    margin: 0 0 0.75rem 0;
+    color: #111827;
+}
+
+.settingGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.settingGroup select,
+.settingGroup input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #f3f4f6;
+    color: #374151;
+    cursor: pointer;
+}
+
+.btnPrimary {
+    background: #3b82f6;
+    color: white;
+}
