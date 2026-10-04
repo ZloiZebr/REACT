@@ -3,7 +3,7 @@ import axios from 'axios'
 export const getProducts = createAsyncThunk(
     'cart/getProducts',
     async () => {
-        const response = await axios.get('http://localhost:3000/products')
+        const response = await axios.get('http://127.0.0.1:8000/products')
         return response.data
     }
 )
@@ -11,7 +11,7 @@ export const getProducts = createAsyncThunk(
 export const addProduct = createAsyncThunk(
     'cart/addProduct',
     async (newProduct) => {
-        const response = await axios.post('http://localhost:3000/products', newProduct)
+        const response = await axios.post('http://127.0.0.1:8000/products', newProduct)
         return response.data
     }
 )
@@ -19,7 +19,7 @@ export const addProduct = createAsyncThunk(
 export const deleteProduct = createAsyncThunk(
     'cart/deleteProduct',
     async (productId) => {
-        await axios.delete(`http://localhost:3000/products/${productId}`)
+        await axios.delete(`http://127.0.0.1:8000/products/${productId}`)
         return productId
     }
 )
